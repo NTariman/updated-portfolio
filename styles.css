@@ -1,0 +1,442 @@
+/* ==========================================
+   NATHANIEL TARIMAN PORTFOLIO
+   Modern Blue & White Theme
+========================================== */
+
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+/* ===========================
+   RESET & BASE STYLES
+=========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #eef4ff;
+    color: #1f2937;
+    line-height: 1.7;
+    transition: background 0.35s, color 0.35s;
+}
+
+/* ===========================
+   HEADER / HERO
+=========================== */
+header {
+    background: linear-gradient(135deg, #0f62fe, #2563eb);
+    color: white;
+    text-align: center;
+    padding: 70px 20px;
+    border-radius: 0 0 45px 45px;
+    box-shadow: 0 15px 35px rgba(37, 99, 235, 0.3);
+    margin-bottom: 45px;
+}
+
+#profile-jpg {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 6px solid white;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+}
+
+#name {
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+#course-year {
+    color: #dbeafe;
+    font-size: 1.15rem;
+    margin-bottom: 25px;
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+button {
+    background: white;
+    color: #2563eb;
+    border: none;
+    border-radius: 40px;
+    padding: 14px 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-4px);
+    background: #dbeafe;
+}
+
+/* ===========================
+   SECTIONS & TYPOGRAPHY
+=========================== */
+section {
+    max-width: 1200px;
+    margin: 0 auto 40px auto;
+    padding: 35px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+    color: #2563eb;
+    font-size: 2rem;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+h2::after {
+    content: "";
+    width: 70px;
+    height: 4px;
+    background: #2563eb;
+    display: block;
+    margin-top: 8px;
+    border-radius: 10px;
+}
+
+p {
+    color: #475569;
+    font-size: 1rem;
+}
+
+/* ===========================
+   GRID LAYOUTS
+=========================== */
+.project-cards,
+.sub,
+.certificate-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.cert-grid {
+    display: grid;
+    /* Controls the maximum width of the cards so they don't look overly wide */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 340px));
+    justify-content: center;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+/* ===========================
+   UNIVERSAL CARDS (Shared Base)
+=========================== */
+.project-card,
+.certificate-card,
+.cert-card,
+.sub a {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    border: 1px solid #dbeafe;
+    transition: 0.35s;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+.project-card:hover,
+.certificate-card:hover,
+.cert-card:hover,
+.sub a:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 35px rgba(37, 99, 235, 0.2);
+}
+
+/* ===========================
+   PROJECT CARDS
+=========================== */
+.project-card {
+    padding: 25px;
+}
+
+.project-card h3 {
+    color: #2563eb;
+    margin-bottom: 12px;
+}
+
+.project-card p {
+    color: #64748b;
+}
+
+/* ===========================
+   ASSESSMENT LINK CARDS
+=========================== */
+.sub a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    font-weight: bold;
+    color: #2563eb;
+}
+
+.sub a:hover {
+    background: #2563eb;
+    color: white;
+}
+
+/* ===========================
+   CERTIFICATIONS (Cleaned & Combined)
+=========================== */
+.certificate-card,
+.cert-card {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cert-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background: #dbeafe;
+    color: #2563eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+}
+
+.certificate-info h3,
+.cert-card h3 {
+    color: #2563eb;
+    margin-bottom: 8px;
+}
+
+.certificate-info h4 {
+    color: #64748b;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.certificate-info p,
+.cert-card p {
+    color: #475569;
+    margin-bottom: 20px;
+}
+
+.cert-meta {
+    display: flex;
+    justify-content: space-between;
+    color: #64748b;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+.certificate-info a,
+.cert-card a {
+    display: inline-block;
+    margin-top: auto;
+    background: #2563eb;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 30px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.certificate-info a:hover,
+.cert-card a:hover {
+    background: #1d4ed8;
+    transform: translateY(-3px);
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+footer {
+    text-align: center;
+    padding: 40px;
+    color: #64748b;
+}
+
+/* ===========================
+   DARK MODE
+=========================== */
+body.dark {
+    background: #0f172a;
+    color: white;
+}
+
+body.dark section {
+    background: #1e293b;
+}
+
+body.dark p {
+    color: #cbd5e1;
+}
+
+body.dark .project-card,
+body.dark .certificate-card,
+body.dark .cert-card,
+body.dark .sub a {
+    background: #334155;
+    border: none;
+}
+
+body.dark h2 {
+    color: #60a5fa;
+}
+
+body.dark button {
+    background: #2563eb;
+    color: white;
+}
+
+/* ===========================
+   LINKEDIN-STYLE EDUCATION
+=========================== */
+.education-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.education-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+/* Remove the border from the very last education item */
+.education-item:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.edu-logo-wrapper {
+    flex-shrink: 0;
+}
+
+.edu-logo {
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+    border-radius: 8px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+}
+
+.edu-details h3 {
+    color: #1f2937;
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 2px;
+    line-height: 1.3;
+}
+
+.edu-degree {
+    color: #475569;
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin-bottom: 2px;
+}
+
+.edu-date {
+    color: #64748b;
+    font-size: 0.88rem;
+}
+
+/* Dark Mode Support */
+body.dark .education-item {
+    border-bottom-color: #334155;
+}
+
+body.dark .edu-details h3 {
+    color: white;
+}
+
+body.dark .edu-degree {
+    color: #cbd5e1;
+}
+
+body.dark .edu-date {
+    color: #94a3b8;
+}
+
+body.dark .edu-logo {
+    background: #334155;
+    border-color: #475569;
+}
+
+
+
+/* ===========================
+   RESPONSIVE DESIGN
+=========================== */
+@media (max-width: 768px) {
+    header {
+        padding: 50px 20px;
+    }
+
+    #name {
+        font-size: 2.3rem;
+    }
+
+    #profile-jpg {
+        width: 150px;
+        height: 150px;
+    }
+
+    section {
+        margin: 20px;
+        padding: 25px;
+    }
+
+    .cert-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 500px) {
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    #name {
+        font-size: 2rem;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .education-item {
+        gap: 15px;
+    }
+
+    .edu-logo {
+        width: 48px;
+        height: 48px;
+    }
+
+    .edu-details h3 {
+        font-size: 1rem;
+    }
+}
